@@ -1,0 +1,87 @@
+
+/* Full-page background image */
+/* Full-page responsive background image */
+.homepage-image {
+  filter: brightness(60%);
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensures image covers the entire page */
+  position: absolute; /* Keeps it fixed in place */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Sends the image behind content */
+}
+
+/* Centered homepage content */
+.homepage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Ensures responsiveness */
+@media (max-width: 768px) {
+  .cta-container {
+      width: 80%;
+      left: 10%;
+      transform: translate(0, -20%);
+      padding: 15px;
+  }
+
+  .cta-button {
+      font-size: 16px;
+      padding: 10px 15px;
+  }
+}
+
+
+/* Call-to-action buttons */
+.cta-buttons button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cta-buttons button:hover {
+  background-color: #cc5500;
+}
+.cta-container {
+  position: absolute;
+  top: 45%; /* Move slightly up */
+  left: 20%; /* Shift a bit to the left */
+  transform: translate(-40%, -20%);
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.cta-button {
+  border: 1px solid orange;
+  background-color: transparent;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  border: none;
+  background-color: #cc5500;
+}

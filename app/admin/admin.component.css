@@ -1,0 +1,41 @@
+.admin-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  padding-top:50px;
+}
+
+h2 {
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #6c757d;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  gap: 30px;
+}
+
+button {
+  padding: 10px 15px;
+  width: 1000px;
+  font-size: 16px;
+  /* background-color: #007bff; */
+  color: black;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #f3e1ba;
+}

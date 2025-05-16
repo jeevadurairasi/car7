@@ -1,0 +1,27 @@
+<div class="edit-profile-container">
+  <h2 class="profile-heading">Edit Profile</h2>
+
+  <div class="avatar-wrapper">
+    <img [src]="profileForm.get('avatar')?.value" alt="User Avatar" class="avatar-preview">
+  </div>
+
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      Name:
+      <input type="text" formControlName="name">
+    </label>
+
+    <label>
+      Email:
+      <input type="email" formControlName="email" >
+    </label>
+
+    <label>
+      Phone no:
+      <input type="text" formControlName="phone" >
+    </label>
+
+     <button id="cp" type="button" (click)="changePassword()" class="change-password-btn">Change Password</button>
+    <button id="sc" type="submit" [disabled]="profileForm.invalid">Save Changes</button>
+  </form>
+</div>

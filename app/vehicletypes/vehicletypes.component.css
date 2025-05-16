@@ -1,0 +1,131 @@
+.car1
+
+/* car background*/
+  {
+  /* background-color: aqua;*/
+  text-align: center;
+  padding: 30px;
+}
+
+.selectlocation1 {
+  margin: 5px;
+  text-align: center;
+}
+
+.selectlocation1 select,
+.date input,
+.category select{
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: Georgia;
+  min-width: 200px;
+  color: #666;
+}
+
+.date {
+  margin-top: 15px;
+
+  text-align: center;
+}
+
+
+.car1 button {
+  margin: 5px;
+  width: 100px;
+  padding: 10px;
+ /* background-color: rgb(243, 238, 229); */
+  color: black;
+  border: 1px solid rgb(243, 241, 236);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.car1 button:disabled{
+  background-color:none;
+  cursor: not-allowed;
+}
+.car1 button:not(:disabled)
+{
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.car2
+
+/*car2 image background*/
+  {
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-left: 120px;
+  margin-right: 120px;
+  padding-bottom: 200px;
+  /* background-color: rgb(236, 20, 20);*/
+  display: flex;
+
+}
+
+.car2 img
+
+/*car2 image */
+  {
+  border-radius: 20px;
+  width: 600px;
+  height: 320px;
+  margin-top: 10px;
+  margin-left: 500px;
+  background: none;
+}
+
+.cardetails
+
+/* car details */
+  {
+  margin-top: 50px;
+  margin-left: 25px;
+  /*  background-color: #ffb3a0; */
+  padding-right: 150px;
+  border-radius: 10px;
+
+}
+
+.cardetails h3 {
+  /*car h3*/
+  /* background-color: #007bff;*/
+  text-align: center;
+  margin-left: 35px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.cardetails ul {
+  list-style-type: none;
+
+}
+
+.cardetails button {
+  margin: auto;
+  padding: 10px;
+  /* //border: 1px solid black; */
+  border: none;
+  border-radius: 5px;
+}
+
+.cardetails button:disabled {
+  cursor: not-allowed;
+
+}
+
+.cardetails button:not(:disabled) {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+
+}
+
+.cardetails button:not(:disabled):hover {
+  background-color: orange;
+}

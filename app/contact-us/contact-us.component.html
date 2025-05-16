@@ -1,0 +1,44 @@
+<div class="contact-us-container">
+  <h1>Contact Us</h1>
+  <p class="contact-description">
+    Have questions? Need assistance? We're here to help!
+  </p>
+
+  <div class="contact-info">
+    <h2>Reach Out to Us</h2>
+    <p><strong>Email:</strong> support@carzyrentals.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Location:</strong> Pune, India</p>
+  </div>
+
+  <div class="contact-form">
+    <h2>Send Us a Message</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <label for="name">Name:</label>
+      <input id="name" type="text" formControlName="name" required>
+
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" formControlName="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+<div class="social-media">
+<h3>Connect with us:</h3>
+
+<a href="https://www.instagram.com/yourpage" target="_blank">
+  <img src="assets/instagram.svg" alt="Instagram">
+</a>
+
+<a href="https://www.facebook.com/yourpage" target="_blank">
+  <img src="assets/facebook.png" alt="Facebook">
+</a>
+
+<a href="https://twitter.com/yourpage" target="_blank">
+  <img src="assets/twitter.webp" alt="X (Twitter)">
+</a>
+</div>

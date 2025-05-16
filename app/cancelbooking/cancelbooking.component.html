@@ -1,0 +1,35 @@
+<div class="body">
+  <div class="container">
+    <h1>Cancel Booking</h1>
+    <div class="form-group">
+      <label for="booking-id">Enter Booking ID:</label>
+      <input type="text" id="booking-id" [(ngModel)]="bookingId" class="form-control" placeholder="Enter booking ID">
+    </div>
+    <button (click)="cancelBooking()" class="btn btn-danger">Cancel Booking</button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div class="container">
+    <div class="mt-4">
+      <h2>Active Rides</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li *ngFor="let ride of activeRides" class="breadcrumb-item">
+            {{ ride.id }} - {{ ride.date }} at {{ ride.time }}
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="mt-4">
+      <h2>Cancelled Rides</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li *ngFor="let ride of cancelledRides" class="breadcrumb-item">{{ ride }}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>

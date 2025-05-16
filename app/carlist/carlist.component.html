@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Car Rental</h1>
+    <h1>LOCATION:{{city}}</h1>
+    <h1>CAR-MODEL:{{carname}}</h1>
+
+    <!-- Filters Section -->
+    <div class="filters">
+        <!-- <div class="form-group">
+            <label for="car-type">Select Car Type:</label>
+            <select id="car-type" [(ngModel)]="selectedType" class="form-control">
+                <option value="all">All</option>
+                <option value="economic">Economic</option>
+                <option value="primere">Primere</option>
+                <option value="luxury">Luxury</option>
+            </select>
+        </div> -->
+        <div class="form-group">
+            <label for="gear-type">Select Gear Type:</label>
+            <select id="gear-type" [(ngModel)]="selectedGearType" class="form-control">
+                <option value="all">All</option>
+                <option value="manual">Manual</option>
+                <option value="automatic">Automatic</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Car Listings Section -->
+    <div class="row">
+        <div class="car-card" *ngFor="let car of filteredCars">
+            <img [src]="car.image" alt="Car image">
+            <div class="caption">
+                <div class="form-group">
+                    <label for="distance-{{ car.name }}">Enter Distance (in km):</label>
+                    <input type="number" id="distance-{{ car.name }}" [(ngModel)]="car.userDistance" class="form-control" placeholder="Enter distance" min="0" required >
+                </div>
+                <div class="form-group">
+                    <label for="days-{{ car.name }}">Enter Rental Days:</label>
+                    <input type="number" id="days-{{ car.name }}" [(ngModel)]="car.rentalDays" class="form-control" placeholder="Enter rental days" min="0" required>
+                </div>
+                <p>Details: {{ car.details }}</p>
+                <p>Gear Type: {{ car.gearType }}</p>
+                <p>Rental Cost: ₹{{ calculateRentalCost(car) }}</p>
+                <p>Extra Discount Rides: {{ car.extraDiscountRides || 0 }}</p>
+                <button class="btn btn-primary"[disabled]="!car.userDistance || !car.rentalDays" (click)=" calculateLoyaltyPoints(car) ; bookCar(car) ">Book Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

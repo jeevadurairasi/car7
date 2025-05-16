@@ -1,0 +1,27 @@
+.container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.rentals-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.rentals-table th, .rentals-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.rentals-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
